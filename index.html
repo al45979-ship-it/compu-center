@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COMPUTER CENTER — Arma tu PC Gamer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="board-lines" aria-hidden="true"></div>
+<div class="glow-blob glow-blob--copper" aria-hidden="true"></div>
+<div class="glow-blob glow-blob--cyan" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="eyebrow">CONFIGURADOR DE HARDWARE</div>
+  <h1 class="title">COMPUTER&nbsp;CENTER</h1>
+  <p class="subtitle">Diseña y configura tu propia computadora personal de videojuegos</p>
+</header>
+
+<main class="layout">
+
+  <form id="build-form" class="build-form" novalidate>
+
+    <div class="cards-grid">
+
+      <!-- GABINETE -->
+      <section class="part-card" data-slot="01">
+        <span class="slot-index">01</span>
+        <div class="card-head">
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="2.5" width="14" height="19" rx="1.5" stroke="currentColor" stroke-width="1.4"/><line x1="8" y1="6" x2="13" y2="6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="15.5" cy="9.2" r="0.9" fill="currentColor"/><line x1="8" y1="15" x2="16" y2="15" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="8" y1="17.3" x2="16" y2="17.3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </span>
+          <div>
+            <h2 class="part-title">Gabinete</h2>
+            <p class="part-hint">La estructura que sostiene todo el sistema.</p>
+          </div>
+        </div>
+        <div class="select-wrap">
+          <select id="gabinete" name="gabinete" required>
+            <option value="" data-price="0" disabled selected>Selecciona un gabinete</option>
+            <option value="Minitorre" data-price="700">Minitorre — $700</option>
+            <option value="Torre" data-price="1200">Torre — $1200</option>
+            <option value="Desktop" data-price="550">Desktop — $550</option>
+            <option value="Gamer" data-price="2500">Gamer — $2500</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- PROCESADOR -->
+      <section class="part-card" data-slot="02">
+        <span class="slot-index">02</span>
+        <div class="card-head">
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="6" y="6" width="12" height="12" rx="1.5" stroke="currentColor" stroke-width="1.4"/><rect x="9.3" y="9.3" width="5.4" height="5.4" rx="0.8" stroke="currentColor" stroke-width="1.2"/><line x1="12" y1="2.5" x2="12" y2="6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><line x1="12" y1="18" x2="12" y2="21.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><line x1="2.5" y1="12" x2="6" y2="12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><line x1="18" y1="12" x2="21.5" y2="12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </span>
+          <div>
+            <h2 class="part-title">Procesador</h2>
+            <p class="part-hint">El cerebro que ejecuta cada fotograma.</p>
+          </div>
+        </div>
+        <div class="select-wrap">
+          <select id="procesador" name="procesador" required>
+            <option value="" data-price="0" disabled selected>Selecciona un procesador</option>
+            <option value="Celeron" data-price="900">Celeron — $900</option>
+            <option value="Intel i3" data-price="1500">Intel i3 — $1500</option>
+            <option value="Intel i5" data-price="3500">Intel i5 — $3500</option>
+            <option value="Intel i7" data-price="5000">Intel i7 — $5000</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- DISCO DURO -->
+      <section class="part-card" data-slot="03">
+        <span class="slot-index">03</span>
+        <div class="card-head">
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="6" rx="8" ry="3" stroke="currentColor" stroke-width="1.4"/><path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6" stroke="currentColor" stroke-width="1.4"/><path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" stroke="currentColor" stroke-width="1.4"/></svg>
+          </span>
+          <div>
+            <h2 class="part-title">Disco Duro</h2>
+            <p class="part-hint">Donde vive tu librería de juegos.</p>
+          </div>
+        </div>
+        <div class="select-wrap">
+          <select id="disco" name="disco" required>
+            <option value="" data-price="0" disabled selected>Selecciona un disco duro</option>
+            <option value="500GB" data-price="500">500GB — $500</option>
+            <option value="750GB" data-price="800">750GB — $800</option>
+            <option value="1TB" data-price="1000">1TB — $1000</option>
+            <option value="250GB SSD" data-price="900">250 GB SSD — $900</option>
+            <option value="500GB SSD" data-price="1380">500 GB SSD — $1380</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- MEMORIA RAM -->
+      <section class="part-card" data-slot="04">
+        <span class="slot-index">04</span>
+        <div class="card-head">
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="10" rx="1.3" stroke="currentColor" stroke-width="1.4"/><line x1="7" y1="7" x2="7" y2="4.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><line x1="11" y1="7" x2="11" y2="4.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><line x1="15" y1="7" x2="15" y2="4.2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><line x1="6.5" y1="10.5" x2="6.5" y2="13.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><line x1="10.5" y1="10.5" x2="10.5" y2="13.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </span>
+          <div>
+            <h2 class="part-title">Memoria RAM</h2>
+            <p class="part-hint">Multitarea sin cuellos de botella.</p>
+          </div>
+        </div>
+        <div class="select-wrap">
+          <select id="ram" name="ram" required>
+            <option value="" data-price="0" disabled selected>Selecciona memoria RAM</option>
+            <option value="4GB" data-price="600">4 GB — $600</option>
+            <option value="8GB" data-price="1050">8 GB — $1050</option>
+            <option value="16GB" data-price="1950">16 GB — $1950</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- MONITOR -->
+      <section class="part-card" data-slot="05">
+        <span class="slot-index">05</span>
+        <div class="card-head">
+          <span class="icon-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="4" width="19" height="13" rx="1.4" stroke="currentColor" stroke-width="1.4"/><line x1="9" y1="20.5" x2="15" y2="20.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="20.5" stroke="currentColor" stroke-width="1.4"/></svg>
+          </span>
+          <div>
+            <h2 class="part-title">Monitor</h2>
+            <p class="part-hint">Tu ventana al campo de batalla.</p>
+          </div>
+        </div>
+        <div class="select-wrap">
+          <select id="monitor" name="monitor" required>
+            <option value="" data-price="0" disabled selected>Selecciona un tamaño</option>
+            <option value="17 pulgadas" data-price="1500">17"</option>
+            <option value="19 pulgadas" data-price="1900">19"</option>
+            <option value="21.5 pulgadas" data-price="2600">21.5"</option>
+            <option value="24 pulgadas" data-price="3400">24"</option>
+            <option value="27 pulgadas" data-price="4800">27"</option>
+            <option value="32 pulgadas" data-price="6900">32"</option>
+          </select>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ACCESORIOS -->
+    <section class="part-card accessories-card" data-slot="06">
+      <span class="slot-index">06</span>
+      <div class="card-head">
+        <span class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 6l6 6-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="13" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </span>
+        <div>
+          <h2 class="part-title">Accesorios</h2>
+          <p class="part-hint">Complementa tu equipo con lo que necesites. Puedes elegir varios.</p>
+        </div>
+      </div>
+
+      <div class="accessories-grid">
+        <label class="chk"><input type="checkbox" name="accesorio" value="Mouse" data-price="250"><span>Mouse</span><em>$250</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Teclado" data-price="350"><span>Teclado</span><em>$350</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Bocinas" data-price="400"><span>Bocinas</span><em>$400</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Webcam" data-price="500"><span>Webcam</span><em>$500</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="UPS" data-price="900"><span>UPS</span><em>$900</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Alfombrilla" data-price="150"><span>Alfombrilla</span><em>$150</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Control Gamer" data-price="600"><span>Control Gamer</span><em>$600</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Luz RGB" data-price="300"><span>Luz RGB</span><em>$300</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Silla Gamer" data-price="2800"><span>Silla Gamer</span><em>$2800</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Adaptador WiFi" data-price="350"><span>Adaptador WiFi</span><em>$350</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Hub USB" data-price="220"><span>Hub USB</span><em>$220</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Audífonos" data-price="450"><span>Audífonos</span><em>$450</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Monitor adicional" data-price="3400"><span>Monitor adicional</span><em>$3400</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Soporte" data-price="280"><span>Soporte</span><em>$280</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Ventilador" data-price="300"><span>Ventilador</span><em>$300</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Micrófono" data-price="500"><span>Micrófono</span><em>$500</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Lector SD" data-price="180"><span>Lector SD</span><em>$180</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Cable HDMI" data-price="120"><span>Cable HDMI</span><em>$120</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Base refrigerante" data-price="380"><span>Base refrigerante</span><em>$380</em></label>
+        <label class="chk"><input type="checkbox" name="accesorio" value="Caja de herramientas" data-price="260"><span>Caja de herramientas</span><em>$260</em></label>
+      </div>
+    </section>
+
+    <div class="submit-row">
+      <button type="submit" class="calc-btn">
+        <span>Calcular Total</span>
+      </button>
+      <button type="reset" class="reset-btn" id="reset-btn">Reiniciar</button>
+    </div>
+
+    <p id="form-warning" class="form-warning" role="alert" aria-live="polite"></p>
+
+  </form>
+
+  <!-- RESUMEN / TOTAL -->
+  <aside class="summary-panel" id="summary-panel" aria-live="polite">
+    <div class="summary-head">
+      <span class="summary-eyebrow">TICKET DE COMPILACIÓN</span>
+      <h2 class="summary-title">Tu equipo</h2>
+    </div>
+
+    <ul class="summary-list" id="summary-list">
+      <li class="summary-empty">Aún no has seleccionado componentes.</li>
+    </ul>
+
+    <div class="led-display">
+      <span class="led-label">TOTAL A PAGAR</span>
+      <div class="led-number" id="led-total">$0</div>
+    </div>
+  </aside>
+
+</main>
+
+<footer class="site-footer">
+  Elaborado por: <strong>[Tu Nombre]</strong> · Proyecto de Formulario · © 2026
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
